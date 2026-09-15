@@ -1,0 +1,29 @@
+{% load static %}
+
+<html>
+    <link rel="stylesheet" href="{% static 'stylesA1.css' %}">
+    <div class="grid-container">
+        <header>
+            <h1>Kevin Durant Quote of the Day</h1>
+        </header>
+        
+        <nav>
+        <li><a href="{% url 'quote_page'%}">Quote of the Day</a></li>    
+        <li><a href="{% url 'show_all_page'%}">show_all</a></li>    
+        <li><a href="{% url 'about_page'%}">About</a></li>   
+ 
+        </nav>
+        
+        <main>
+        
+    <h1>Welcome!</h1>
+    {% block context%}
+    {% endblock %}        
+
+        </main>
+
+        <aside>
+            <p></p>
+        </aside>
+    </div>
+</html>
